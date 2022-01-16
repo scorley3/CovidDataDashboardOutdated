@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>COVID-19 Data</title>
+<link href="covid.css" rel="stylesheet" />
+</head>
+<body>
+<h1>COVID-19 Data</h1>
+<div id="inputSpace">
+<div id="state" class="search">
+<h2>search by state</h2> 
+<p> receive current case data from selected state</p>
+<input type="text" id="stateEntry"/> 
+<input type="button" value="search" id="searchState" />
+</div>
+<div id="country" class="search">
+<h2>search by country</h2>
+<p> receive current case data from selected country</p>
+<input type="text" id="countryEntry"/> 
+<input type="button" value="search" id="searchCountry" />
+</div>
+<div id="historical" class="search">
+<h2 id="instructions">instructions</h2>
+<p class="instr">for state data, enter a two character state code ex: IL</p>
+<p class="instr">for country data, enter a full country name with spaces ex: United States of America</p>
+<p class = "instr"> for global data, click this button</p>
+<input type="button" value="get global data" id="globalBtn" />
+</div>
+<div id="output">
+<h2>results</h2>
+<p id="error"></p>
+<div id="stateData">
+<p>state: <span id="stateName"></span></p>
+<p>total cases: <span id="stateTotCases"></span></p>
+<p>new cases: <span id="stateNewCases"></span></p>
+<p>total deaths: <span id="stateTotalDeaths"></span></p>
+<p>new deaths: <span id="stateNewDeaths"></span></p>
+</div>
+<div id="countryData">
+<p>country: <span id="countryName"></span></p>
+<p>total cases: <span id="countryTotCases"></span></p>
+<p>new cases: <span id="countryNewCases"></span></p>
+<p>total deaths: <span id="countryTotalDeaths"></span></p>
+<p>new deaths: <span id="countryNewDeaths"></span></p>
+</div>
+<div id="globalData">
+<p>total cases: <span id="globalTotCases"></span></p>
+<p>new cases: <span id="globalNewCases"></span></p>
+<p>total deaths: <span id="globalTotalDeaths"></span></p>
+<p>new deaths: <span id="globalNewDeaths"></span></p>
+</div>
+</div>
+</div>
+<script src="covid.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
